@@ -1,0 +1,36 @@
+﻿<Window x:Class="TimeManager.AddEventWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Add event" Height="250" Width="440" Icon="Pics/addEventWindow.ico"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Label Name="eventNameLabel" Content="Event name:" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+        <Label Name="eventTyprLabel" Content="Event type:" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+        <Label Name="eventNotesLabel" Content="Event notes:" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+        <TextBox Name="eventNameTextBox" Grid.Column="3" Grid.Row="1" FontSize="20"/>
+        <ComboBox Name="eventTypeComboBox" Grid.Column="3" Grid.Row="3" SelectedIndex="0" FontSize="20" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+            <ComboBoxItem>Once</ComboBoxItem>
+            <ComboBoxItem>Repeat</ComboBoxItem>
+            </ComboBox>
+        <TextBox Name="eventNotesTextBox" Grid.Column="3" Grid.Row="5" FontSize="20"/>
+        <Button Name="eventSaveButton" Content="Save" Grid.Column="3" Grid.Row="7" FontSize="20" Click="eventSaveButton_Click"/>
+    </Grid>
+</Window>

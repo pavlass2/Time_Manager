@@ -1,0 +1,27 @@
+﻿<Window x:Class="TimeManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Time Manager" Height="350" Width="300" MinHeight="350" MinWidth="300" Icon="Pics\mainWindow.ico" >
+   
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".5*"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height=".5*"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height=".5*"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="startEventButton" Content="Start next event" Grid.Row="0" Grid.ColumnSpan="3" Background="#FF07C918" FontSize="20" Click="startEventButton_Click" />
+        <ListBox x:Name="activeEventTextBlock" Grid.Row="2" Grid.ColumnSpan="3" VerticalAlignment="Center" FontSize="20" ItemsSource="{Binding Events}"/>
+        <Button x:Name="eventButton" Content="Add Event" Grid.Row="4" Grid.ColumnSpan="3" FontSize="20" Click="eventButton_Click" />
+        <Button x:Name="optionsButton" Content="Options" Grid.Row="6" Grid.ColumnSpan="3" FontSize="20" Click="optionsButton_Click" />
+     </Grid>
+</Window>

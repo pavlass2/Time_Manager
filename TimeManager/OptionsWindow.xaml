@@ -1,0 +1,31 @@
+﻿<Window x:Class="TimeManager.OptionsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Options" Height="200" Width="300" Icon="Pics/optionsWindow.ico"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="50"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="10"/>
+
+        </Grid.RowDefinitions>
+        <Label Name="eventLengthLabel" Content="Event length" FontSize="20" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center"/>
+        <Label Name="eventLengthMinuteLabel" Content="min" FontSize="20" Grid.Column="3" Grid.Row="1" VerticalAlignment="Center"/>
+        <Label Name="breakLengthLabel" Content="Break length" FontSize="20" Grid.Column="0" Grid.Row="3" VerticalAlignment="Center"/>
+        <Label Name="breakLengthMinuteLabel" Content="min" FontSize="20" Grid.Column="3" Grid.Row="3" VerticalAlignment="Center"/>
+        <Button Name="saveButton" Content="Save" Grid.Row="5" FontSize="20" Grid.Column="0" Grid.ColumnSpan="3" Click="saveButton_Click"/>
+        <TextBox Name="eventLengtTextBox" Grid.Row="1" Grid.Column="1" FontSize="20" />
+        <TextBox Name="breakLengtTextBox" Grid.Row="3" Grid.Column="1" FontSize="20"/>
+    </Grid>
+
+</Window>
